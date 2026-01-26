@@ -9,7 +9,7 @@ var jsPsych = initJsPsych({
 
 const participant_id_qualtrics = jsPsych.data.getURLVariable('participant_id_qualtrics');
 const subject_id = jsPsych.randomization.randomID(10);
-const filename = `subject${participant_id_qualtrics}.csv`;
+const filename = `subject${participant_id_qualtrics}_conservative.csv`;
 
 const save_data = {
   type: jsPsychPipe,
