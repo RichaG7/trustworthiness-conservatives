@@ -24,12 +24,12 @@ const save_data = {
 //var study_id = jsPsych.data.getURLVariable('STUDY_ID');
 //var session_id = jsPsych.data.getURLVariable('SESSION_ID');
 
-//jsPsych.data.addProperties({
+jsPsych.data.addProperties({
 //  subject_id: subject_id,
-//  participant_id_qualtrics: participant_id_qualtrics,
+  participant_id_qualtrics: participant_id_qualtrics
 //  study_id: study_id,
 //  session_id: session_id
-//});
+});
 
 // Array containing all parts in order of appearance
 var timeline = [];
@@ -365,60 +365,61 @@ var instructions_data = [
     }
 ];
 
-var training_stimuli = stimuli_data_conservative[0].training_con.combination1;
-var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
 var attnchk_stimuli = stimuli_data_conservative[2].attentioncheck.attentioncheck;
 var instructions_stimuli = instructions_data[0].instructions.instructions;
 
-//} else if (subject_id in ["2", "18", "34", "50", "66", "82"]) {
-//  var Combination2_training
-//  var Combination2
-//} else if (subject_id in ["3", "19", "35", "51", "67", "83"]) {
-//  var Combination3_training
-//  var Combination3
-//} else if (subject_id in ["4", "20", "36", "52", "68", "84"]) {
-//  var Combination4_training
-//  var Combination4
-//} else if (subject_id in ["5", "21", "37", "53", "69", "85"]) {
-//  var Combination1_training
-//  var Combination5
-//} else if (subject_id in ["6", "22", "38", "54", "70", "86"]) {
-//  var Combination2_training
-//  var Combination6
-//} else if (subject_id in ["7", "23", "39", "55", "71", "87"]) {
-//  var Combination3_training
-//  var Combination7
-//} else if (subject_id in ["8", "24", "40", "56", "72", "88"]) {
-//  var Combination4_training
-//  var Combination8
-//} else if (subject_id in ["9", "25", "41", "57", "73", "89"]) {
-//  var Combination1_training
-//  var Combination9
-//} else if (subject_id in ["10", "26", "42", "58", "74", "90"]) {
-//  var Combination2_training
-//  var Combination10
-//} else if (subject_id in ["11", "27", "43", "59", "75", "91"]) {
-//  var Combination3_training
-//  var Combination11
-//} else if (subject_id in ["12", "28", "44", "60", "76", "92"]) {
-//  var Combination4_training
-//  var Combination12
-//} else if (subject_id in ["13", "29", "45", "61", "77", "93"]) {
-//  var Combination1_training
-//  var Combination13
-//} else if (subject_id in ["14", "30", "46", "62", "78", "94"]) {
-//  var Combination2_training
-//  var Combination14
-//} else if (subject_id in ["15", "31", "47", "63", "79", "95"]) {
-//  var Combination3_training
-//  var Combination15
-//} else if (subject_id in ["16", "32", "48", "64", "80", "96"]) {
-//  var Combination4_training
-//  var Combination16
-//} else {
-//  var Combination1_training
-//  var Combination1
-//}
+if (participant_id_qualtrics in ["1", "17", "33", "49", "65", "81"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination1;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
+} else if (subject_id in ["2", "18", "34", "50", "66", "82"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination2;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
+} else if (subject_id in ["3", "19", "35", "51", "67", "83"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination3;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
+} else if (subject_id in ["4", "20", "36", "52", "68", "84"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination4;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
+} else if (subject_id in ["5", "21", "37", "53", "69", "85"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination5;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
+} else if (subject_id in ["6", "22", "38", "54", "70", "86"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination6;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
+} else if (subject_id in ["7", "23", "39", "55", "71", "87"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination7;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
+} else if (subject_id in ["8", "24", "40", "56", "72", "88"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination8;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
+} else if (subject_id in ["9", "25", "41", "57", "73", "89"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination9;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
+} else if (subject_id in ["10", "26", "42", "58", "74", "90"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination10;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
+} else if (subject_id in ["11", "27", "43", "59", "75", "91"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination11;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
+} else if (subject_id in ["12", "28", "44", "60", "76", "92"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination12;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
+} else if (subject_id in ["13", "29", "45", "61", "77", "93"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination13;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
+} else if (subject_id in ["14", "30", "46", "62", "78", "94"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination14;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
+} else if (subject_id in ["15", "31", "47", "63", "79", "95"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination15;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
+} else if (subject_id in ["16", "32", "48", "64", "80", "96"]) {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination16;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
+} else {
+  var training_stimuli = stimuli_data_conservative[0].training_con.combination1;
+  var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
+}
 
 all_images = [];
 for (i=0; i < training_stimuli.length; i++){
