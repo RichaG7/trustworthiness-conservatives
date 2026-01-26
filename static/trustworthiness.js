@@ -553,25 +553,25 @@ for (i=0; i < training_stimuli.length; i++){
     
     <div class="row justify-content-center" id="likert-radios">
       <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy3" id="trustworthy3" value="trustworthy3" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy3" id="trustworthy3" value="trustworthy3" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy4" id="trustworthy4" value="trustworthy4" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy4" id="trustworthy4" value="trustworthy4" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy5" id="trustworthy5" value="trustworthy5" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy5" id="trustworthy5" value="trustworthy5" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy6" id="trustworthy6" value="trustworthy6" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy6" id="trustworthy6" value="trustworthy6" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy7" id="trustworthy7" value="trustworthy7">
+        <input class="form-check-input" type="radio" name="trustworthy7" id="trustworthy7" value="trustworthy7" disabled="true">
       </div>
     </div>
   `
@@ -594,14 +594,6 @@ var train_trials = {
   trial_duration: stimuli_display_duration,
   on_load: function() {
 
-    document.addEventListener("click", handler, true);
-    document.addEventListener("dblclick", handler, true);
-    
-    function handler(e) {
-      e.stopPropagation();
-      e.preventDefault();
-    }
-
     jsPsych.pluginAPI.getKeyboardResponse({
       callback_function: after_response, 
       valid_responses: jsPsych.timelineVariable('train_response_keys'), 
@@ -618,7 +610,7 @@ var train_trials = {
     var press_number_train = 1;
     var previous_id_train = ""
     
-    document.addEventListener('keydown', () => {
+    function record_all_events_task(event) {
       var this_id_train = `trustworthy${event.key}`;
       if (press_number_train > 1) {
         document.getElementById(previous_id_train).checked = false;
@@ -629,7 +621,9 @@ var train_trials = {
       previous_id_train = this_id_train
       console.log(previous_id_train)
       press_number_train++;
-    })
+    }
+
+    document.addEventListener('keydown', record_all_events_task);
   },
   response_ends_trial: jsPsych.timelineVariable('move_page'),
   data: {
@@ -690,25 +684,25 @@ for (i=0; i < testing_stimuli.length; i++){
     
     <div class="row justify-content-center" id="likert-radios">
       <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy3" id="trustworthy3" value="trustworthy3" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy3" id="trustworthy3" value="trustworthy3" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy4" id="trustworthy4" value="trustworthy4" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy4" id="trustworthy4" value="trustworthy4" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy5" id="trustworthy5" value="trustworthy5" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy5" id="trustworthy5" value="trustworthy5" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy6" id="trustworthy6" value="trustworthy6" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy6" id="trustworthy6" value="trustworthy6" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy7" id="trustworthy7" value="trustworthy7">
+        <input class="form-check-input" type="radio" name="trustworthy7" id="trustworthy7" value="trustworthy7" disabled="true">
       </div>
     </div>
   `
@@ -767,7 +761,7 @@ task_stims.push({
     
     <div class="row justify-content-center" id="likert-radios">
       <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" style="margin-right:100px;">
@@ -804,8 +798,8 @@ var task_trials = {
   stimulus: jsPsych.timelineVariable('task_stimulus'),
   choices: jsPsych.timelineVariable('task_response_keys'),
   trial_duration: jsPsych.timelineVariable('task_duration'),
-on_load: function() {
-
+  on_load: function() {
+    
     jsPsych.pluginAPI.getKeyboardResponse({
       callback_function: after_response, 
       valid_responses: jsPsych.timelineVariable('task_response_keys'),
@@ -822,7 +816,7 @@ on_load: function() {
     var press_number_task = 1;
     var previous_id_task = ""
     
-    document.addEventListener('keydown', () => {
+    function record_all_events_task(event) {
       var this_id_task = `trustworthy${event.key}`;
       if (press_number_task > 1) {
         document.getElementById(previous_id_task).checked = false;
@@ -833,7 +827,9 @@ on_load: function() {
       previous_id_task = this_id_task
       console.log(previous_id_task)
       press_number_task++;
-    })
+    }
+
+    document.addEventListener('keydown', record_all_events_task);
   },
   response_ends_trial: jsPsych.timelineVariable('move_page'),
   data: {
@@ -942,12 +938,15 @@ var instructions1 = {
 var instructions2 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="row align-items-center justify-content-center">
-      <h2>
-        <p>Beneath the profile, you will see the following question.
-        </p><br><br>
-      </h2>
+    <div class="container d-flex align-items-center justify-content-center min-vh-80" id="profile_container_task">
+      <div class="row align-items-center justify-content-center" id="instructions2_container">
+        <h2>
+          <p>Beneath the profile, you will see the following question.
+          </p><br><br>
+        </h2>
+      </div>
     </div>
+    
     <div class="row justify-content-center" id="likert-prompt">
       <h4>
         <p>${trustworthiness_likert_scale_prompt}
@@ -981,25 +980,25 @@ var instructions2 = {
     
     <div class="row justify-content-center" id="likert-radios">
       <div class="form-check form-check-inline">
-      <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy3" id="trustworthy3" value="trustworthy3" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy3" id="trustworthy3" value="trustworthy3" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy4" id="trustworthy4" value="trustworthy4" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy4" id="trustworthy4" value="trustworthy4" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy5" id="trustworthy5" value="trustworthy5" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy5" id="trustworthy5" value="trustworthy5" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy6" id="trustworthy6" value="trustworthy6" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy6" id="trustworthy6" value="trustworthy6" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy7" id="trustworthy7" value="trustworthy7">
+        <input class="form-check-input" type="radio" name="trustworthy7" id="trustworthy7" value="trustworthy7" disabled="true">
       </div>
     </div>`
 };
