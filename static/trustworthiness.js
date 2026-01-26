@@ -2,12 +2,13 @@ var jsPsych = initJsPsych({
   display_element: 'experimentcontainer', // Initialize jsPsych in specific div
   on_finish: function() {
     //jsPsych.data.displayData();
-    window.location = `https://delaware.ca1.qualtrics.com/jfe/form/SV_cT2BRnAMHgOnpkO?participant_id_qualtrics=${participant_id_qualtrics}`;
+    window.location = `https://delaware.ca1.qualtrics.com/jfe/form/SV_cT2BRnAMHgOnpkO?participant_id_qualtrics=${participant_id_qualtrics}&combo=${combo_qualtrics}`;
     //jsPsych.data.get().localSave('csv','mydata.csv');
   }
 });
 
 const participant_id_qualtrics = jsPsych.data.getURLVariable('participant_id_qualtrics');
+const combo_qualtrics = jsPsych.data.getURLVariable('combo');
 const subject_id = jsPsych.randomization.randomID(10);
 const filename = `subject${participant_id_qualtrics}_conservative.csv`;
 
@@ -368,52 +369,52 @@ var instructions_data = [
 var attnchk_stimuli = stimuli_data_conservative[2].attentioncheck.attentioncheck;
 var instructions_stimuli = instructions_data[0].instructions.instructions;
 
-if (participant_id_qualtrics in ["1", "17", "33", "49", "65", "81"]) {
+if (combo_qualtrics in ["1", "17", "33", "49", "65", "81"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination1;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
-} else if (subject_id in ["2", "18", "34", "50", "66", "82"]) {
+} else if (combo_qualtrics in ["2", "18", "34", "50", "66", "82"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination2;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
-} else if (subject_id in ["3", "19", "35", "51", "67", "83"]) {
+} else if (combo_qualtrics in ["3", "19", "35", "51", "67", "83"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination3;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
-} else if (subject_id in ["4", "20", "36", "52", "68", "84"]) {
+} else if (combo_qualtrics in ["4", "20", "36", "52", "68", "84"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination4;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
-} else if (subject_id in ["5", "21", "37", "53", "69", "85"]) {
+} else if (combo_qualtrics in ["5", "21", "37", "53", "69", "85"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination5;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
-} else if (subject_id in ["6", "22", "38", "54", "70", "86"]) {
+} else if (combo_qualtrics in ["6", "22", "38", "54", "70", "86"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination6;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
-} else if (subject_id in ["7", "23", "39", "55", "71", "87"]) {
+} else if (combo_qualtrics in ["7", "23", "39", "55", "71", "87"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination7;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
-} else if (subject_id in ["8", "24", "40", "56", "72", "88"]) {
+} else if (combo_qualtrics in ["8", "24", "40", "56", "72", "88"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination8;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
-} else if (subject_id in ["9", "25", "41", "57", "73", "89"]) {
+} else if (combo_qualtrics in ["9", "25", "41", "57", "73", "89"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination9;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
-} else if (subject_id in ["10", "26", "42", "58", "74", "90"]) {
+} else if (combo_qualtrics in ["10", "26", "42", "58", "74", "90"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination10;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
-} else if (subject_id in ["11", "27", "43", "59", "75", "91"]) {
+} else if (combo_qualtrics in ["11", "27", "43", "59", "75", "91"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination11;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
-} else if (subject_id in ["12", "28", "44", "60", "76", "92"]) {
+} else if (combo_qualtrics in ["12", "28", "44", "60", "76", "92"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination12;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
-} else if (subject_id in ["13", "29", "45", "61", "77", "93"]) {
+} else if (combo_qualtrics in ["13", "29", "45", "61", "77", "93"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination13;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
-} else if (subject_id in ["14", "30", "46", "62", "78", "94"]) {
+} else if (combo_qualtrics in ["14", "30", "46", "62", "78", "94"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination14;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
-} else if (subject_id in ["15", "31", "47", "63", "79", "95"]) {
+} else if (combo_qualtrics in ["15", "31", "47", "63", "79", "95"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination15;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
-} else if (subject_id in ["16", "32", "48", "64", "80", "96"]) {
+} else if (combo_qualtrics in ["16", "32", "48", "64", "80", "96"]) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination16;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
 } else {
@@ -480,8 +481,8 @@ var dompres_likert_scale_labels = [
     
 // Likert scale prompt
 var trustworthiness_likert_scale_prompt = "On a scale of 1-7, how trustworthy or untrustworthy do you find this person to be?";
-var dominance_likert_scale_prompt = "This person is very dominant.";
-var prestige_likert_scale_prompt = "This person is very prestigious.";
+var dominance_likert_scale_prompt = "This person is very <strong>dominant.</strong>";
+var prestige_likert_scale_prompt = "This person is very <strong>prestigious.</strong>";
 var dompres_likert_scale_preamble = "How much do you agree or disagree with the following statements about this person? You can work quickly; your first feeling is generally best.";
 
 // Valid keys during trials
@@ -593,6 +594,14 @@ var train_trials = {
   choices: trial_responses,
   trial_duration: stimuli_display_duration,
   on_load: function() {
+
+    document.addEventListener("click", handler, true);
+    document.addEventListener("dblclick", handler, true);
+    
+    function handler(e) {
+      e.stopPropagation();
+      e.preventDefault();
+    }
 
     jsPsych.pluginAPI.getKeyboardResponse({
       callback_function: after_response, 
