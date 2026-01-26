@@ -2,15 +2,14 @@ var jsPsych = initJsPsych({
   display_element: 'experimentcontainer', // Initialize jsPsych in specific div
   on_finish: function() {
     //jsPsych.data.displayData();
-    window.location = `https://delaware.ca1.qualtrics.com/jfe/form/SV_cT2BRnAMHgOnpkO?participant_id_qualtrics=${participant_id_qualtrics}&combo=${combo_qualtrics}`;
+    window.location = `https://delaware.ca1.qualtrics.com/jfe/form/SV_cT2BRnAMHgOnpkO?participant_id_qualtrics=${participant_id_qualtrics}&combo=${combo_qualtrics}&PROLIFIC_PID=${subject_id_prolific}`;
     //jsPsych.data.get().localSave('csv','mydata.csv');
   }
 });
 
 const participant_id_qualtrics = jsPsych.data.getURLVariable('participant_id_qualtrics');
 const combo_qualtrics = jsPsych.data.getURLVariable('combo');
-const subject_id = jsPsych.randomization.randomID(10);
-const filename = `subject${participant_id_qualtrics}_conservative.csv`;
+const filename = `subject${participant_id_qualtrics}_prolificID${subject_id_prolific}_conservative.csv`;
 
 const save_data = {
   type: jsPsychPipe,
@@ -21,15 +20,15 @@ const save_data = {
 };
 
 // capture info from Prolific
-//var subject_id = jsPsych.data.getURLVariable('PROLIFIC_PID');
-//var study_id = jsPsych.data.getURLVariable('STUDY_ID');
-//var session_id = jsPsych.data.getURLVariable('SESSION_ID');
+var subject_id_prolific = jsPsych.data.getURLVariable('PROLIFIC_PID');
+var study_id_prolific = jsPsych.data.getURLVariable('STUDY_ID');
+var session_id_prolific = jsPsych.data.getURLVariable('SESSION_ID');
 
 jsPsych.data.addProperties({
-//  subject_id: subject_id,
-  participant_id_qualtrics: participant_id_qualtrics
-//  study_id: study_id,
-//  session_id: session_id
+  subject_id_prolific: subject_id_prolific,
+  participant_id_qualtrics: participant_id_qualtrics,
+  study_id_prolific: study_id_prolific,
+  session_id_prolific: session_id_prolific
 });
 
 // Array containing all parts in order of appearance
