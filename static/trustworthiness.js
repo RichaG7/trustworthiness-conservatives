@@ -2,7 +2,7 @@ var jsPsych = initJsPsych({
   display_element: 'experimentcontainer', // Initialize jsPsych in specific div
   on_finish: function() {
     //jsPsych.data.displayData();
-    window.location = `https://delaware.ca1.qualtrics.com/jfe/form/SV_cT2BRnAMHgOnpkO?participant_id_qualtrics=${participant_id_qualtrics}&combo=${combo_qualtrics}&PROLIFIC_PID=${subject_id_prolific}`;
+    window.location = `https://delaware.ca1.qualtrics.com/jfe/form/SV_cT2BRnAMHgOnpkO?participant_id_qualtrics=${participant_id_qualtrics}&combo=${combo_qualtrics}&PROLIFIC_PID=${subject_id_prolific}&STUDY_ID=${study_id_prolific}&SESSION+ID=${session_id_prolific}`;
     //jsPsych.data.get().localSave('csv','mydata.csv');
   }
 });
@@ -946,7 +946,7 @@ var instructions2 = {
         </h2>
       </div>
     </div>
-    
+
     <div class="row justify-content-center" id="likert-prompt">
       <h4>
         <p>${trustworthiness_likert_scale_prompt}
