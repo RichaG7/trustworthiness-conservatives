@@ -479,7 +479,7 @@ var dompres_likert_scale_labels = [
 ];
     
 // Likert scale prompt
-var trustworthiness_likert_scale_prompt = "On a scale of 1-7, how trustworthy or untrustworthy do you find this person to be?";
+var trustworthiness_likert_scale_prompt = "On a scale of 1-7, how <strong>trustworthy or untrustworthy</strong> do you find this person to be?";
 var dominance_likert_scale_prompt = "This person is very <strong>dominant.</strong>";
 var prestige_likert_scale_prompt = "This person is very <strong>prestigious.</strong>";
 var dompres_likert_scale_preamble = "How much do you agree or disagree with the following statements about this person? You can work quickly; your first feeling is generally best.";
@@ -761,22 +761,22 @@ task_stims.push({
     
     <div class="row justify-content-center" id="likert-radios">
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy1" id="trustworthy1" value="trustworthy1" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy2" id="trustworthy2" value="trustworthy2" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy3" id="trustworthy3" value="trustworthy3" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy3" id="trustworthy3" value="trustworthy3" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy4" id="trustworthy4" value="trustworthy4" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy4" id="trustworthy4" value="trustworthy4" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy5" id="trustworthy5" value="trustworthy5" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy5" id="trustworthy5" value="trustworthy5" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
-        <input class="form-check-input" type="radio" name="trustworthy6" id="trustworthy6" value="trustworthy6" style="margin-right:100px;">
+        <input class="form-check-input" type="radio" name="trustworthy6" id="trustworthy6" value="trustworthy6" disabled="true" style="margin-right:100px;">
       </div>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="trustworthy7" id="trustworthy7" value="trustworthy7">
@@ -1006,11 +1006,11 @@ var instructions2 = {
 var instructions3 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-80" id="instruction3_container">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="instruction3_container">
       <h2>
-        <p>You will have 3.5 seconds to respond using the keyboard key that
-        corresponds to your answer. For example, if you want to rate a profile 1
-        out of 7, please press the "7" key.</p><br><br>
+        <p>You will have <strong>3.5 seconds</strong> to respond using the <strong>keyboard key</strong> that
+        corresponds to your answer. For example, <strong>if you want to rate a profile 1
+        out of 7, please press the "7" key.</strong></p><br><br>
         <p> Press any key to continue. </p>
       </h2>
     </div>`
@@ -1019,10 +1019,10 @@ var instructions3 = {
 var instructions4 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-80" id="instruction4_container">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="instruction4_container">
       <h2>
         <p>After you have entered a response, you will see a "+" in the middle of
-        the screen for 1s, while your response is saved.</p><br><br>
+        the screen for 1 second, while your response is saved.</p><br><br>
         <p> Press any key to continue. </p>
       </h2>
     </div>`
@@ -1031,7 +1031,7 @@ var instructions4 = {
 var instructions5 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-80" id="instruction5_container">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="instruction5_container">
       <h2>
         <p>You will now complete <strong>4 practice trials</strong> before beginning the task.</p><br><br>
         <p>Press any key to begin the training.</p>
@@ -1046,7 +1046,7 @@ var instruction_procedure = {
 var training_beginning_message = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-80" id="beginning_training_container">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="beginning_training_container">
       <h1>
         Beginning training...
       </h1>
@@ -1057,7 +1057,7 @@ var training_beginning_message = {
 var task_beginning_message = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-80" id="beginning_task_container">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="beginning_task_container">
       <h1>
         You have completed the training. Please press any key to proceed to the main task.
       </h1>
@@ -1067,7 +1067,7 @@ var task_beginning_message = {
 var posttask_beginning_message = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-80" id="beginning_task_container">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="beginning_task_container">
       <h2>
         <p>You have completed the main task.</p><br>
         <p>The next section can only be responded to using <strong>mouse clicks</strong>, not keyboard keys.</p><br>
@@ -1080,7 +1080,7 @@ var posttask_beginning_message = {
 var posttask_ending_message = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-80" id="beginning_task_container">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="beginning_task_container">
       <h2>
         <p>You have completed the profile rating section of this study. </p><br>
         <p>For the last section of this study, you will be redirected to Qualtrics where you will answer some questions about yourself.</p><br><br>
