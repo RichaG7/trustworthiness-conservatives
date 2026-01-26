@@ -1,0 +1,33 @@
+Stimuli,conservative_mean,liberal_mean,dominance_mean,prestige_mean,power_mean,influence_mean,PoliticalIdeology,Condition,Text
+DomCon_055,4.677,3.355,5.323,3.839,4.645,4.161,Conservative,dominance,Fear regulates faster than reason.
+DomCon_064,5.161,2.903,5.032,3.968,4.548,4.097,Conservative,dominance,"Men lead, women nurture."
+DomCon_018,5.29,2.226,4.742,3.968,4.71,4.71,Conservative,dominance,Participation trophies coddle those who were too weak to win.
+PresCon_002,4.688,3.594,4.375,3.5,4.062,4,Conservative,dominance,Our government weaponizes education to brainwash us.
+DomCon_040,4.452,3.226,4.323,3.581,4.226,4,Conservative,dominance,Boys will be boys.
+DomCon_019,4.6,3.6,4.233,3.833,4.6,4.433,Conservative,dominance,"Our education system does not want to educate children, it wants our money."
+DomCon_023,4.29,3.419,4.129,3.806,4.29,3.968,Conservative,dominance,Too much thinking leads to too little action.
+DomLib_002,4.5,3.333,4.1,3.667,4.633,4.6,Conservative,dominance,It’s not about our health - they are using us as guinea pigs for their own goals.
+Pres_046,5.219,3.875,3.781,5.125,5,5.438,Conservative,prestige,Children are our greatest wealth.
+PresCon_031,5.812,3.031,3.969,5.094,5.344,5.719,Conservative,prestige,Our most important responsibility is to support our family.
+Pres_016,4.7,3.8,3.933,4.6,4.533,4.533,Conservative,prestige,We speak less when we are certain.
+Pres_018,5.097,3.355,3.839,4.581,5.097,5.258,Conservative,prestige,"We must reward those who take the long road, not just the fast one."
+PresCon_034,5.194,2.903,3.742,4.387,4.645,5.065,Conservative,prestige,Our elders know best.
+Pres_025,4.533,3.8,3.567,4.167,4.267,4.467,Conservative,prestige,It’s easier to criticize than to build.
+PresCon_006,4.938,3.531,3.969,4.125,4.781,4.906,Conservative,prestige,The free market is a reflection of our basic human instincts.
+PresLib_041,4.806,3.484,3.839,4.032,4.677,5.065,Conservative,prestige,Humility is a virtue.
+DomLib_056,2.903,5.29,4.839,3.613,4.935,5.161,Liberal,dominance,"Our society doesn’t need reform, it needs a revolution."
+Dom_014,3.727,4.515,4.697,3.121,4.152,4.273,Liberal,dominance,"Since those in power do not care about us, we must take matters into our own hands."
+DomLib_060,3.467,4.8,4.567,3.633,5.267,5.067,Liberal,dominance,We must have the courage to change the rules that hold us back.
+DomLib_048,3.806,4.387,4.516,3.677,5.065,4.097,Liberal,dominance,"The 'neutral' are not neutral, they are hiding their complacency."
+Dom_025,2.774,5.548,4.484,3.742,4.774,5.323,Liberal,dominance,Judges that are compromised by money and special interests must be removed.
+PresCon_043,3.433,4.767,4.333,3.833,4.733,4.733,Liberal,dominance,We should be proud of being softhearted; but we cannot afford to be soft-headed.
+DomLib_052,3.226,5.097,4.29,3.839,5,5.097,Liberal,dominance,"Rights are not negotiable, no matter how one behaves."
+Dom_032,3.545,4.576,4.273,3.818,4.485,4.576,Liberal,dominance,We must act to end laws that favor any special groups or interests.
+PresLib_027,2.067,6.467,3.667,5.533,5.1,6.233,Liberal,prestige,Free libraries are necessary to ensure that every child is educated.
+PresLib_005,2.467,5.6,3.167,5.4,5.367,5.733,Liberal,prestige,"The greatest legacy is not wealth, it is wisdom."
+Pres_058,2.774,5.226,3.645,5.323,5,5.323,Liberal,prestige,"Our nation has always led the world not by force, but by example."
+Pres_022,2.933,5.833,3.133,5,4.933,5.533,Liberal,prestige,Collaboration is better than competition.
+Pres_043,2.7,5.467,3.433,4.967,5.4,5.7,Liberal,prestige,Educating our kids should be this nation’s priority.
+PresLib_055,2.75,5.375,3,4.938,4.969,5.531,Liberal,prestige,Our nation's spirit is about working together for a better tomorrow.
+PresLib_011,1.533,6.367,3.067,4.9,4.933,5.967,Liberal,prestige,We must be willing to share the benefits of our hard work with all.
+PresLib_038,1.906,6.406,3.156,4.688,5.344,6.188,Liberal,prestige,"By lifting each other, we can make all of us stronger."
