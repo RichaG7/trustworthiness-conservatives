@@ -488,7 +488,7 @@ var dompres_likert_scale_preamble = "How much do you agree or disagree with the 
 var trial_responses = ["1", "2", "3", "4", "5", "6", "7"];
 
 // Valid keys during attention check trial
-var attnchk_responses = ["1", "2", "3", "4", "5", "6", "7", "E"];
+var attnchk_responses = ["1", "2", "3", "4", "5", "6", "7", "E", "e"];
 
 // Stimuli display duration
 var stimuli_display_duration = 3500; // 3.5s
