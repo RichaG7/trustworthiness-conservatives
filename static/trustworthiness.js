@@ -9,7 +9,7 @@ var jsPsych = initJsPsych({
 
 // capture info from Qualtrics
 const participant_id_qualtrics = jsPsych.data.getURLVariable('participant_id_qualtrics');
-const combo_qualtrics = jsPsych.data.getURLVariable('combo');
+const combo_qualtrics = Number(jsPsych.data.getURLVariable('combo'));
 
 // capture info from Prolific
 const subject_id_prolific = jsPsych.data.getURLVariable('PROLIFIC_PID');
@@ -372,52 +372,52 @@ var instructions_data = [
 var attnchk_stimuli = stimuli_data_conservative[2].attentioncheck.attentioncheck;
 var instructions_stimuli = instructions_data[0].instructions.instructions;
 
-if (combo_qualtrics == "1") {
+if (combo_qualtrics == 1) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination1;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
-} else if (combo_qualtrics == "2") {
+} else if (combo_qualtrics == 2) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination2;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
-} else if (combo_qualtrics == "3") {
+} else if (combo_qualtrics == 3) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination3;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
-} else if (combo_qualtrics == "4") {
+} else if (combo_qualtrics == 4) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination4;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
-} else if (combo_qualtrics == "5") {
+} else if (combo_qualtrics == 5) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination5;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
-} else if (combo_qualtrics == "6") {
+} else if (combo_qualtrics == 6) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination6;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
-} else if (combo_qualtrics == "7") {
+} else if (combo_qualtrics == 7) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination7;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
-} else if (combo_qualtrics == "8") {
+} else if (combo_qualtrics == 8) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination8;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
-} else if (combo_qualtrics == "9") {
+} else if (combo_qualtrics == 9) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination9;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
-} else if (combo_qualtrics == "10") {
+} else if (combo_qualtrics == 10) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination10;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
-} else if (combo_qualtrics == "11") {
+} else if (combo_qualtrics == 11) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination11;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
-} else if (combo_qualtrics == "12") {
+} else if (combo_qualtrics == 12) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination12;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
-} else if (combo_qualtrics == "13") {
+} else if (combo_qualtrics == 13) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination13;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination1;
-} else if (combo_qualtrics == "14") {
+} else if (combo_qualtrics == 14) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination14;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination2;
-} else if (combo_qualtrics == "15") {
+} else if (combo_qualtrics == 15) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination15;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination3;
-} else if (combo_qualtrics == "16") {
+} else if (combo_qualtrics == 16) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination16;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination4;
 } else {
