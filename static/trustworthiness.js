@@ -31,7 +31,8 @@ jsPsych.data.addProperties({
   subject_id_prolific: subject_id_prolific,
   participant_id_qualtrics: participant_id_qualtrics,
   study_id_prolific: study_id_prolific,
-  session_id_prolific: session_id_prolific
+  session_id_prolific: session_id_prolific,
+  combo: combo_qualtrics
 });
 
 // Array containing all parts in order of appearance
@@ -505,7 +506,7 @@ var fixation = {
   stimulus: '<div class="container d-flex align-items-center justify-content-center min-vh-100" id="fixation_container" style="font-size:100px;">+</div>',
   choices: "NO_KEYS",
   trial_duration: fixation_display_duration,
-  data: {task: 'fixation'}
+  data: {phase: 'fixation'}
 };
 
 // Create array of training stimuli
