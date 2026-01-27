@@ -7,9 +7,16 @@ var jsPsych = initJsPsych({
   }
 });
 
+// capture info from Qualtrics
 const participant_id_qualtrics = jsPsych.data.getURLVariable('participant_id_qualtrics');
 const combo_qualtrics = jsPsych.data.getURLVariable('combo');
-const filename = `subject${participant_id_qualtrics}_prolificID${subject_id_prolific}_conservative.csv`;
+
+// capture info from Prolific
+const subject_id_prolific = jsPsych.data.getURLVariable('PROLIFIC_PID');
+const study_id_prolific = jsPsych.data.getURLVariable('STUDY_ID');
+const session_id_prolific = jsPsych.data.getURLVariable('SESSION_ID');
+
+const filename = `subject${participant_id_qualtrics}_prolificID${subject_id_prolific}_combo${combo_qualtrics}conservative.csv`;
 
 const save_data = {
   type: jsPsychPipe,
@@ -19,10 +26,6 @@ const save_data = {
   data_string: ()=>jsPsych.data.get().csv()
 };
 
-// capture info from Prolific
-var subject_id_prolific = jsPsych.data.getURLVariable('PROLIFIC_PID');
-var study_id_prolific = jsPsych.data.getURLVariable('STUDY_ID');
-var session_id_prolific = jsPsych.data.getURLVariable('SESSION_ID');
 
 jsPsych.data.addProperties({
   subject_id_prolific: subject_id_prolific,
