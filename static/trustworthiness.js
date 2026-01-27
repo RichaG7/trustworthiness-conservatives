@@ -10,6 +10,7 @@ var jsPsych = initJsPsych({
 // capture info from Qualtrics
 const participant_id_qualtrics = jsPsych.data.getURLVariable('participant_id_qualtrics');
 const combo_qualtrics = Number(jsPsych.data.getURLVariable('combo'));
+console.log(combo_qualtrics)
 
 // capture info from Prolific
 const subject_id_prolific = jsPsych.data.getURLVariable('PROLIFIC_PID');
@@ -432,10 +433,10 @@ for (i=0; i < training_stimuli.length; i++){
 for (i=0; i < testing_stimuli.length; i++){
   all_images.push(testing_stimuli[i][0])
 };
-//for (i=0; i < attnchk_stimuli.length; i++){
-//  all_images.push(attnchk_stimuli[i][0])
-//};
-all_images.push(attnchk_stimuli[0][0])
+for (i=0; i < attnchk_stimuli.length; i++){
+  all_images.push(attnchk_stimuli[i][0])
+};
+//all_images.push(attnchk_stimuli[0][0])
 // preload all stimuli into browser memory for more accurate timing
 var preload = {
   type: jsPsychPreload,
