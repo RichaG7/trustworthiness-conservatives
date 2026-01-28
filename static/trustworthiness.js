@@ -422,7 +422,7 @@ if (combo_qualtrics == 1) {
   var training_stimuli = stimuli_data_conservative[0].training_con.combination4;
   var testing_stimuli = stimuli_data_conservative[1].testing_con.combination16;
 } else {
-  jsPsych.endExperiment();
+  jsPsych.endExperiment("Error: page failed to load.");
 }
 
 all_images = [];
@@ -884,6 +884,8 @@ for (i=0; i < testing_stimuli.length; i++){
     posttask_stimulus2: dompres_likert_scale_prompts[1],
     posttask_stimulus_name1: posttask_stimulus_name[0],
     posttask_stimulus_name2: posttask_stimulus_name[1],
+    posttask_stimulus_face: testing_stimuli[i][0],
+    posttast_stimulus_sentence: testing_stimuli[i][1],
     posttask_response_keys: dompres_likert_scale_labels, // Trustworthiness likert keys
     posttask_move_page: true
   });
@@ -898,7 +900,13 @@ var posttask_trials = {
     {prompt: jsPsych.timelineVariable('posttask_stimulus1'), name: jsPsych.timelineVariable('posttask_stimulus_name1'), labels: jsPsych.timelineVariable('posttask_response_keys')},
     {prompt: jsPsych.timelineVariable('posttask_stimulus2'), name: jsPsych.timelineVariable('posttask_stimulus_name2'), labels: jsPsych.timelineVariable('posttask_response_keys')}
   ],
-  randomize_question_order: false
+  randomize_question_order: false,
+  data: {
+    phase: 'likert',
+    stimulus: jsPsych.timelineVariable('posttask_preamble'),
+    stimulus_face: jsPsych.timelineVariable('posttask_stimulus_face'),
+    stimulus_sentence: jsPsych.timelineVariable('posttast_stimulus_sentence')
+  }
 };
 
 var posttask_procedure = {
