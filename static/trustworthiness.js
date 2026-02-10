@@ -1079,7 +1079,7 @@ var posttask_beginning_message = {
         <p>You have completed the main task.</p><br>
         <p>The next section can only be responded to using <strong>mouse clicks</strong>, not keyboard keys.</p><br>
         <p>You will rate the profiles you have seen on dominance and prestige.</p><br><br>
-        <p>Please press any key to continue.</p>
+        <p>Please press any key on your keyboard to continue.</p>
       </h2>
     </div>`
 };
