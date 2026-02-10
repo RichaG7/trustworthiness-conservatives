@@ -885,7 +885,7 @@ for (i=0; i < testing_stimuli.length; i++){
     posttask_stimulus_name1: posttask_stimulus_name[0],
     posttask_stimulus_name2: posttask_stimulus_name[1],
     posttask_stimulus_face: testing_stimuli[i][0],
-    posttast_stimulus_sentence: testing_stimuli[i][1],
+    posttask_stimulus_sentence: testing_stimuli[i][1],
     posttask_response_keys: dompres_likert_scale_labels, // Trustworthiness likert keys
     posttask_move_page: true
   });
@@ -905,7 +905,7 @@ var posttask_trials = {
     phase: 'likert',
     stimulus: jsPsych.timelineVariable('posttask_preamble'),
     stimulus_face: jsPsych.timelineVariable('posttask_stimulus_face'),
-    stimulus_sentence: jsPsych.timelineVariable('posttast_stimulus_sentence')
+    stimulus_sentence: jsPsych.timelineVariable('posttask_stimulus_sentence')
   }
 };
 
@@ -918,7 +918,7 @@ var welcome = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
     <div class="container d-flex align-items-center justify-content-center min-vh-100" id="welcome_container">
-      <h2>Welcome to the experiment. Press any key to begin.</h2>
+      <h2>Welcome to the experiment. Please press any key on your keyboard to begin.</h2>
     </div>`
 };
 
@@ -942,7 +942,7 @@ var instructions1 = {
     </div>
     <div class="row align-items-center justify-content-center">
       <h2>
-        <p> Press any key to continue. </p>
+        <p> Please press any key on your keyboard to continue. </p>
       </h2>
     </div>`
 };
@@ -1012,18 +1012,25 @@ var instructions2 = {
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="trustworthy7" id="trustworthy7" value="trustworthy7" disabled="true">
       </div>
+    </div>
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="instruction3_container">
+      <h2>
+        <p>You will have <strong>3.5 seconds</strong> to respond using the <strong>keyboard key</strong> that
+        corresponds to your answer. For example, <strong>if you want to rate a profile 1
+        out of 7, please press the "7" key.</strong></p><br><br>
+        <p> Please press any key on your keyboard to continue. </p>
+      </h2>
     </div>`
 };
 
 var instructions3 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="instruction3_container">
+    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="instruction4_container">
       <h2>
-        <p>You will have <strong>3.5 seconds</strong> to respond using the <strong>keyboard key</strong> that
-        corresponds to your answer. For example, <strong>if you want to rate a profile 1
-        out of 7, please press the "7" key.</strong></p><br><br>
-        <p> Press any key to continue. </p>
+        <p>After you have entered a response, you will see a "+" in the middle of
+        the screen for 1 second, while your response is saved.</p><br><br>
+        <p> Please press any key on your keyboard to continue. </p>
       </h2>
     </div>`
 };
@@ -1031,28 +1038,16 @@ var instructions3 = {
 var instructions4 = {
   type: jsPsychHtmlKeyboardResponse,
   stimulus: `
-    <div class="container d-flex align-items-center justify-content-center min-vh-100" id="instruction4_container">
-      <h2>
-        <p>After you have entered a response, you will see a "+" in the middle of
-        the screen for 1 second, while your response is saved.</p><br><br>
-        <p> Press any key to continue. </p>
-      </h2>
-    </div>`
-};
-
-var instructions5 = {
-  type: jsPsychHtmlKeyboardResponse,
-  stimulus: `
     <div class="container d-flex align-items-center justify-content-center min-vh-100" id="instruction5_container">
       <h2>
         <p>You will now complete <strong>4 practice trials</strong> before beginning the task.</p><br><br>
-        <p>Press any key to begin the training.</p>
+        <p>Please press any key on your keyboard to begin the training.</p>
       </h2>
     </div>`
 };
 
 var instruction_procedure = {
-  timeline: [welcome, instructions1, instructions2, instructions3, instructions4, instructions5],
+  timeline: [welcome, instructions1, instructions2, instructions3, instructions4],
 };
 
 var training_beginning_message = {
@@ -1071,7 +1066,7 @@ var task_beginning_message = {
   stimulus: `
     <div class="container d-flex align-items-center justify-content-center min-vh-100" id="beginning_task_container">
       <h1>
-        You have completed the training. Please press any key to proceed to the main task.
+        You have completed the training. Please press any key on your keyboard to proceed to the main task.
       </h1>
     </div>`
 };
@@ -1096,7 +1091,7 @@ var posttask_ending_message = {
       <h2>
         <p>You have completed the profile rating section of this study. </p><br>
         <p>For the last section of this study, you will be redirected to Qualtrics where you will answer some questions about yourself.</p><br><br>
-        <p>Please press any key to continue.</p>
+        <p>Please press any key on your keyboard to continue.</p>
       </h2>
     </div>`
 };
